@@ -15,7 +15,7 @@ function EventCard({ title, image, slug, location, date, time }: Props) {
     <Link href={`/events/${slug}`} id="event-card">
       <Image
         src={image}
-        alt={title}
+        alt={slug}
         width={410}
         height={300}
         className="poster"
