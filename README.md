@@ -1,4 +1,4 @@
-# DevEvent - Developer Events Platform
+# DevEvent - Developer Events Platform [https://www.gencode.studio/]
 
 A modern, full-stack web application built with Next.js 16 for discovering, creating, and managing developer events. Features a beautiful UI with animated light rays, event management, and user booking system.
 
