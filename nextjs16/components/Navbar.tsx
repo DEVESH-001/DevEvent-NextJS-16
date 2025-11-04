@@ -10,8 +10,8 @@ function Navbar() {
           <p>DevEvent</p>
         </Link>
         <ul>
-          <Link href="/events">Home</Link>
-          <Link href="/events">Events</Link>
+          <Link href="/">Home</Link>
+          <Link href="/">Events</Link>
           <Link href="/createevent">Create Event</Link>
         </ul>
       </nav>

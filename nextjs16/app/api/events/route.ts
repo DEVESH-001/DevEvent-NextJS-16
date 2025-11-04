@@ -3,6 +3,13 @@ import connectDB from "@/lib/mongodb";
 import { NextRequest, NextResponse } from "next/server";
 import { v2 as cloudinary } from "cloudinary";
 
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || "dkfv0r0y9",
+  api_key: process.env.CLOUDINARY_API_KEY || "974719142245354",
+  api_secret: process.env.CLOUDINARY_API_SECRET || "l8cQrKG9XHytUrTAJdecEXZmi9U",
+});
+
 export async function POST(req: NextRequest) {
   try {
     await connectDB();
