@@ -6,7 +6,7 @@ import connectDB from "../mongodb";
 export const getAllEvents = async(): Promise<IEventData[]> => {
     try {
         await connectDB();
-        const events = await Event.find().sort({ createdAt: -1 }).lean().exec();
+        const events = await Event.find().sort({ createdAt: -1 }).lean().exec(); 
         
         return events.map(event => ({
             ...event,

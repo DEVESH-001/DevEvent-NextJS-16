@@ -108,7 +108,7 @@ const EventSchema = new Schema<IEvent>(
       validate: {
         validator: (v: string[]) => v.length > 0,
         message: "At least one agenda item is required",
-      },
+      }, 
     },
     organizer: {
       type: String,

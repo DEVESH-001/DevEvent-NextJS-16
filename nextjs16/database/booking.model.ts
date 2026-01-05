@@ -13,7 +13,7 @@ const BookingSchema = new Schema<IBooking>(
   {
     eventId: {
       type: Schema.Types.ObjectId,
-      ref: "Event",
+      ref: "Event", // Reference to Event model
       required: [true, "Event ID is required"],
     },
     email: {
@@ -25,7 +25,7 @@ const BookingSchema = new Schema<IBooking>(
         validator: function (email: string) {
           // RFC 5322 compliant email validation regex
           const emailRegex =
-            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+            /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/; 
           return emailRegex.test(email);
         },
         message: "Please provide a valid email address",
